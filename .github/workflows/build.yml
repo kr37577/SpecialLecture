@@ -11,4 +11,4 @@ jobs:
 #            python -m pip install --upgrade pip
 #            pip install -r reqirement.txt
       - name: Run Tests
-        run: python -m unittest test/test_CSVPrinter.py
+        run: python -m unittest tests/test*.py
