@@ -1,6 +1,7 @@
 import csv
 import unittest
 from specaillecture.CSVPrinter import CSVPrinter
+import os.path
 
 class TestCSVPrinter(unittest.TestCase):
 
@@ -11,8 +12,8 @@ class TestCSVPrinter(unittest.TestCase):
             l = printer.read()
         except :
             print("-1")
-
-        printer = CSVPrinter("sample.csv")
+        file_path = os.path.join(os.path.dirname(__file__), "sample.csv")
+        printer = CSVPrinter(file_path)
         l = printer.read()
         
         line = len (l)
