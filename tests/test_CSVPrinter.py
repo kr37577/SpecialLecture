@@ -12,6 +12,9 @@ class TestCSVPrinter(unittest.TestCase):
         except :
             print("-1")
 
+        printer = CSVPrinter("sample.csv")
+        l = printer.read()
+        
         line = len (l)
         row = len(l[0])
 
